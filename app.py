@@ -2,7 +2,12 @@ import os
 os.system("pip install -r requirements-new.txt")
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+try:
+    import matplotlib.pyplot as plt
+    st.success("✅ matplotlib loaded")
+except ImportError:
+    st.error("❌ matplotlib not found")
+
 import base64
 try:
     import seaborn as sns

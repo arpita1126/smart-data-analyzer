@@ -1,5 +1,5 @@
 import os
-os.system("pip install -r requirements-new.txt")
+os.system("pip install -r requirements.txt")
 import streamlit as st
 import pandas as pd
 try:

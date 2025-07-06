@@ -1,8 +1,14 @@
 import streamlit as st
 import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
 import base64
+try:
+    import seaborn as sns
+    st.success("✅ Seaborn loaded successfully!")
+except ImportError:
+    st.error("❌ Seaborn not installed. Please check requirements.txt.")
+    raise
+
 try:
     import plotly.express as px
 except ImportError:

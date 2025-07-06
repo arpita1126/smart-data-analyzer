@@ -1,3 +1,5 @@
+import os
+os.system("pip install -r requirements-new.txt")
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt

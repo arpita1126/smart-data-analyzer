@@ -1,9 +1,15 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
 import base64
+try:
+    import plotly.express as px
+except ImportError:
+    import streamlit as st
+    st.error("❌ Plotly is not installed. Please fix requirements.txt.")
+    raise
+
 
 st.set_page_config(
     page_title="📊 Smart Data Analyzer",
